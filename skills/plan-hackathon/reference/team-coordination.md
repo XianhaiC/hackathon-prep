@@ -57,6 +57,42 @@ Only generate this if team size > 1. Replace all [BRACKETS].
 - [ ] Repo pushed, README updated?
 ```
 
+## What's already done (don't redo)
+
+// WHY: PolicyGuard's HANDOFF.md started with a status table so nobody wasted time
+// redoing setup work. Critical when teammates arrive at different times.
+
+| Layer | Status | Notes |
+|-------|--------|-------|
+| [Repo created] | DONE | [url] |
+| [Deployed blank app] | DONE/TODO | [deploy url] |
+| [API keys obtained] | DONE/TODO | In `.env.local` |
+| [Sponsor tool tested] | DONE/TODO | `npm run test:[sponsor]` green |
+| [Demo scenario decided] | DONE/TODO | [brand/input] |
+
+## Concrete demo scenarios
+
+// WHY: PolicyGuard pre-defined EXACTLY 3 actions with expected results.
+// WHY: No improvisation on demo day. Everyone knows what "success" looks like.
+
+| # | Input | Expected result | Sponsor visible |
+|---|-------|----------------|-----------------|
+| 1 | [specific input] | [specific output/verdict] | [which sponsor tool] |
+| 2 | [specific input] | [specific output/verdict] | [which sponsor tool] |
+| 3 | [specific input] | [specific output/verdict] | [which sponsor tool] |
+
+## Acceptance criteria ("ready to demo" at [FREEZE_TIME])
+
+// WHY: PolicyGuard had explicit acceptance criteria. If ANY is red, you're not done.
+
+- [ ] Core loop runs end-to-end on live data (not just fixtures)
+- [ ] Demo mode fixtures return deterministic results
+- [ ] All [N] sponsor tools visible in the demo flow
+- [ ] Demo scenario runs in under [DEMO_LENGTH]
+- [ ] Backup recording exists
+- [ ] README documents setup + sponsor tools
+- [ ] Devpost draft written
+
 ## Team split patterns (from analyzed winners)
 
 ### 4-person team (PolicyGuard pattern)
