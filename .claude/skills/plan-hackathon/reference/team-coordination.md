@@ -10,8 +10,8 @@ Only generate this if team size > 1. Replace all [BRACKETS].
 
 ## Roles
 
-// WHY: Each person owns SPECIFIC FILES, not concepts. "You do Nimble stuff" is too vague.
-// WHY: Kill criteria with deadlines prevent "almost done" at submission time.
+- Each person owns SPECIFIC FILES, not concepts. "You do Nimble stuff" is too vague.
+- Kill criteria with deadlines prevent "almost done" at submission time.
 
 | Person | Owns | P0 task | Kill criterion | Deadline |
 |--------|------|---------|----------------|----------|
@@ -19,7 +19,7 @@ Only generate this if team size > 1. Replace all [BRACKETS].
 
 ## Integration flow (who touches what)
 
-// WHY: Shows how pieces connect. Prevents two people editing the same file.
+- Shows how pieces connect. Prevents two people editing the same file.
 
 ```
 [Person A]: [input] → [their module]
@@ -36,7 +36,7 @@ Only generate this if team size > 1. Replace all [BRACKETS].
 **Where to wire:** [Specific file paths they should be editing]
 **Handoff to [other person]:** [What they deliver to whom]
 
-// Repeat for each team member
+- Repeat for each team member
 
 ## Demo commands (everyone)
 
@@ -48,7 +48,7 @@ Only generate this if team size > 1. Replace all [BRACKETS].
 
 ## Freeze checklist ([FREEZE_TIME])
 
-// WHY: Everyone checks in at feature freeze. No surprises.
+- Everyone checks in at feature freeze. No surprises.
 
 - [ ] [Person A]: [their deliverable] working?
 - [ ] [Person B]: [their deliverable] working?
@@ -59,8 +59,8 @@ Only generate this if team size > 1. Replace all [BRACKETS].
 
 ## What's already done (don't redo)
 
-// WHY: PolicyGuard's HANDOFF.md started with a status table so nobody wasted time
-// redoing setup work. Critical when teammates arrive at different times.
+- PolicyGuard's HANDOFF.md started with a status table so nobody wasted time
+- redoing setup work. Critical when teammates arrive at different times.
 
 | Layer | Status | Notes |
 |-------|--------|-------|
@@ -72,8 +72,8 @@ Only generate this if team size > 1. Replace all [BRACKETS].
 
 ## Concrete demo scenarios
 
-// WHY: PolicyGuard pre-defined EXACTLY 3 actions with expected results.
-// WHY: No improvisation on demo day. Everyone knows what "success" looks like.
+- PolicyGuard pre-defined EXACTLY 3 actions with expected results.
+- No improvisation on demo day. Everyone knows what "success" looks like.
 
 | # | Input | Expected result | Sponsor visible |
 |---|-------|----------------|-----------------|
@@ -83,7 +83,7 @@ Only generate this if team size > 1. Replace all [BRACKETS].
 
 ## Acceptance criteria ("ready to demo" at [FREEZE_TIME])
 
-// WHY: PolicyGuard had explicit acceptance criteria. If ANY is red, you're not done.
+- PolicyGuard had explicit acceptance criteria. If ANY is red, you're not done.
 
 - [ ] Core loop runs end-to-end on live data (not just fixtures)
 - [ ] Demo mode fixtures return deterministic results

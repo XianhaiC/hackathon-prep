@@ -29,7 +29,7 @@ Keep this open on your phone.
 
 ## Pitch script ([DEMO_LENGTH])
 
-// WHY: Pre-written > improvised. Time every section.
+- Pre-written > improvised. Time every section.
 
 **[HOOK · ~15s]**
 "[One provocative statement about the problem. Cite a stat if possible.]"
@@ -73,8 +73,8 @@ Keep this open on your phone.
 
 ## Pre-hackathon checklist (night before / morning of)
 
-// WHY: GhostWriter pre-wrote CLAUDE.md, SPEC.md, BATTLE_KIT.md before the hackathon started.
-// WHY: PolicyGuard pre-configured Senso org, ingested demo data, deployed placeholder site.
+- GhostWriter pre-wrote CLAUDE.md, SPEC.md, BATTLE_KIT.md before the hackathon started.
+- PolicyGuard pre-configured Senso org, ingested demo data, deployed placeholder site.
 
 - [ ] CLAUDE.md, SPEC.md, BATTLE_KIT.md written and in repo
 - [ ] All API keys obtained and verified working (`curl` test each)
@@ -87,8 +87,8 @@ Keep this open on your phone.
 
 ## Commit strategy
 
-// WHY: GhostWriter committed every phase. Judges can see the build progression.
-// WHY: "Working code only on main" — never push broken code.
+- GhostWriter committed every phase. Judges can see the build progression.
+- "Working code only on main" — never push broken code.
 
 Commit after each phase with a clear message:
 - `phase 1: scaffold + deploy + integration stubs`
@@ -99,8 +99,8 @@ Commit after each phase with a clear message:
 
 ## Demo harness command
 
-// WHY: PolicyGuard had `npm run demo` that ran 3 scenarios deterministically.
-// WHY: A reproducible demo command = guaranteed working presentation.
+- PolicyGuard had `npm run demo` that ran 3 scenarios deterministically.
+- A reproducible demo command = guaranteed working presentation.
 
 Add to `package.json`:
 ```json
