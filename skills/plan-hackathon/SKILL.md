@@ -87,6 +87,11 @@ Read the relevant templates from `~/.claude/skills/plan-hackathon/reference/`:
 - `team-coordination.md` — only if team > 1
 - `demo-script.md` — always
 - `devpost.md` — always (write devpost at feature freeze, not submission)
+- `ui-surfaces.md` — always (define visible surfaces BEFORE building)
+
+IMPORTANT: Generate the UI Surface Map FIRST in Phase 3. Every feature in the
+SPEC must connect to a visible panel. If a feature has no visible surface, drop it.
+The demo is the product — work backwards from what judges see on screen.
 
 Generate customized versions for the user's hackathon + chosen idea.
 Present documents ONE AT A TIME for review. Start with CLAUDE.md (most important),
@@ -133,7 +138,9 @@ Confirm: "All battle docs written. You're ready to build."
 
 ## Core principles (enforce these throughout)
 
-1. **Scope kills.** The #1 reason hackathon projects fail is scope creep.
+1. **If it's not visible, don't build it.** Every feature must connect to a
+   panel on the dashboard. No visible surface = don't build it.
+2. **Scope kills.** The #1 reason hackathon projects fail is scope creep.
    Every feature must pass: "Will the judge see it in 3 min?"
 2. **Demo mode is mandatory.** `DEMO_MODE=true` returns fixtures. No API = no broken demo.
 3. **The devpost is a deliverable.** Write it at feature freeze, not at submission.
