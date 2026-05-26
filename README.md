@@ -17,7 +17,7 @@ A `/plan-hackathon` skill for [Claude Code](https://claude.ai/code) that walks y
 ### Install the skill
 
 ```bash
-cp -r skill ~/.claude/skills/plan-hackathon
+cp -r skills/plan-hackathon ~/.claude/skills/plan-hackathon
 ```
 
 Then in any Claude Code session:
