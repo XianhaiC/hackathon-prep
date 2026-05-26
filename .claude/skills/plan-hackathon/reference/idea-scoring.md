@@ -46,8 +46,9 @@ Weighted total = sum(score × weight). Compare across ideas.
 
 ## Sponsor prize optimization table
 
-| Sponsor | Prize | Natural fit? | Visible in demo? | Meets specific criteria? | Target? |
-|---------|-------|-------------|------------------|------------------------|---------|
-| [name] | [amount] | Yes/Forced/No | Yes/No | Yes/Partial/No | Y/N |
+| Sponsor | Prize | Required? | Natural fit? | Visible in demo? | Meets specific criteria? | Target? |
+|---------|-------|-----------|-------------|------------------|------------------------|---------|
+| [name] | [amount] | Yes/No | Yes/Forced/No | Yes/No | Yes/Partial/No | Y/N |
 
-Only target prizes where all three are "Yes".
+- Required sponsors must be used regardless of fit — focus on making them visible.
+- Only target optional sponsor prizes where Natural + Visible + Criteria are all "Yes".

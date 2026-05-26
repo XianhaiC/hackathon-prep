@@ -89,7 +89,9 @@ Read the relevant templates from `~/.claude/skills/plan-hackathon/reference/`:
 - `devpost.md` — always (write devpost at feature freeze, not submission)
 
 Generate customized versions for the user's hackathon + chosen idea.
-Present ALL documents to the user in chat for review. DO NOT write files yet.
+Present documents ONE AT A TIME for review. Start with CLAUDE.md (most important),
+then SPEC.md, then BATTLE_KIT.md, etc. Ask for feedback after each before proceeding
+to the next. DO NOT write files yet.
 
 Key formulas (generalized, not hardcoded):
 - `feature_freeze = submission_time - 2 hours`

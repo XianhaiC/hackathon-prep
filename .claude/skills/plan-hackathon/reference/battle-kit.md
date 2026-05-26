@@ -73,9 +73,6 @@ Keep this open on your phone.
 
 ## Pre-hackathon checklist (night before / morning of)
 
-- GhostWriter pre-wrote CLAUDE.md, SPEC.md, BATTLE_KIT.md before the hackathon started.
-- PolicyGuard pre-configured Senso org, ingested demo data, deployed placeholder site.
-
 - [ ] CLAUDE.md, SPEC.md, BATTLE_KIT.md written and in repo
 - [ ] All API keys obtained and verified working (`curl` test each)
 - [ ] Repo created, blank app deployed to Vercel (prove the pipeline)
@@ -87,10 +84,7 @@ Keep this open on your phone.
 
 ## Commit strategy
 
-- GhostWriter committed every phase. Judges can see the build progression.
-- "Working code only on main" — never push broken code.
-
-Commit after each phase with a clear message:
+Commit after each phase with a clear message (judges can see progression):
 - `phase 1: scaffold + deploy + integration stubs`
 - `phase 2: core agent loop end-to-end`
 - `phase 3: dashboard UI + one-click trigger`
@@ -98,9 +92,6 @@ Commit after each phase with a clear message:
 - `phase 5: README + demo prep`
 
 ## Demo harness command
-
-- PolicyGuard had `npm run demo` that ran 3 scenarios deterministically.
-- A reproducible demo command = guaranteed working presentation.
 
 Add to `package.json`:
 ```json
