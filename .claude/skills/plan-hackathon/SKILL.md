@@ -86,6 +86,7 @@ Read the relevant templates from `~/.claude/skills/plan-hackathon/reference/`:
 - `battle-kit.md` — always
 - `team-coordination.md` — only if team > 1
 - `demo-script.md` — always
+- `devpost.md` — always (write devpost at feature freeze, not submission)
 
 Generate customized versions for the user's hackathon + chosen idea.
 Present ALL documents to the user in chat for review. DO NOT write files yet.
