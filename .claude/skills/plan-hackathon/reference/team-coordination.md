@@ -10,8 +10,9 @@ Only generate this if team size > 1. Replace all [BRACKETS].
 
 ## Roles
 
-- Each person owns SPECIFIC FILES, not concepts. "You do Nimble stuff" is too vague.
-- Kill criteria with deadlines prevent "almost done" at submission time.
+IMPORTANT: The Agent Builder must own the entire pipeline + all tool calls.
+Integration helpers build raw API wrappers to the Agent Builder's defined interface.
+Agent Builder writes mocks FIRST so they're never blocked. See "Team split patterns" below.
 
 | Person | Owns | P0 task | Kill criterion | Deadline |
 |--------|------|---------|----------------|----------|
@@ -95,19 +96,46 @@ Only generate this if team size > 1. Replace all [BRACKETS].
 
 ## Team split patterns (from analyzed winners)
 
-### 4-person team (PolicyGuard pattern)
+### Critical principle: Agent Builder owns the pipeline
+
+The person building the agent/pipeline must own ALL tool calls and define
+the integration interfaces. Integration helpers build raw API wrappers to
+the Agent Builder's spec. This way:
+- Agent Builder writes mocks/fixtures FIRST, is never blocked
+- Integration helpers replace mocks with real API calls
+- Agent Builder can test end-to-end at any time
+- No cross-dependency friction
+
+DO NOT split by "each person owns a different sponsor integration" —
+the agent person can't test without knowing what integrations return.
+
+### 4-person team
 | Role | What they own | Key trait |
 |------|-------------|-----------|
-| **Core engineer** | API, pipeline, data model, deploy | Strongest builder. Owns the critical path. |
-| **Integration 1** | Sponsor tool A integration | One file, clear handoff point. |
-| **Integration 2** | Sponsor tool B + payments | One file, clear handoff point. |
-| **Glue person** | README, UI, demo polish, devpost, site | Makes everything look cohesive for judges. Often most commits. |
+| **Agent Builder** | Pipeline/loop, ALL tool calls, API routes, demo fixtures, deploy | Defines integration interfaces. Writes mocks first. Tests end-to-end. Never blocked. |
+| **Integration Helper A** | One raw API wrapper (e.g. `nimble.ts`) to Agent Builder's spec | Builds to the function signature Agent Builder defined. Moves to help Agent Builder when done. |
+| **Integration Helper B** | Another raw API wrapper (e.g. `senso.ts`, `clickhouse.ts`) | Same — once wrapper works, helps Agent Builder or Glue Person. |
+| **Glue Person** | UI, dashboard, README, devpost, demo recording, slides | Makes everything presentable. Often most commits. The "taste" person. |
+
+**Interface contract:** Agent Builder defines the function signatures on day 1:
+```typescript
+// Agent Builder writes this interface. Helpers implement it.
+searchBrand(brand: string): Promise<BrandMention[]>
+publishCorrection(data: Correction): Promise<{url: string}>
+```
+
+### 3-person team
+| Role | What they own |
+|------|-------------|
+| **Agent Builder** | Pipeline, ALL tool calls, API routes, demo fixtures |
+| **Integration Helper** | All raw API wrappers to Agent Builder's spec |
+| **Glue Person** | UI, dashboard, README, devpost, demo recording |
 
 ### 2-person team
 | Role | What they own |
 |------|-------------|
-| **Builder** | Agent loop, API, core logic, sponsor integrations |
-| **Presenter** | UI, dashboard, demo prep, devpost, slides, README |
+| **Agent + Backend** | Pipeline, tool calls, API routes, all integrations, demo fixtures |
+| **UI + Demo** | Dashboard, components, README, devpost, slides, demo recording |
 
 ### Solo
 Everything is yours. Prioritize: core loop → UI → polish → demo prep.
