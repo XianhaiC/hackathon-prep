@@ -111,26 +111,15 @@ Add to `package.json`:
 The demo script should trigger your agent loop with pre-configured inputs
 and print/render the result. Same output every time.
 
-## Devpost writing guide
+## Devpost submission
 
-// WHY: PolicyGuard's devpost was the best of all submissions — thorough, specific, business-aware.
-// WHY: Write at FREEZE time, not at submission time. Treat it as a deliverable.
-
-Write at [FREEZE]. Sections:
-1. **Inspiration** — Real-world problem with data/citation. "362 AI incidents in 2025 (Stanford HAI)"
-2. **What it does** — Walk through a CONCRETE example, not abstract. Show the schema/output.
-3. **How we built it** — Sponsor mapping table. Architecture diagram.
-4. **Challenges** — Be specific and honest. "Nimble SERP API was undocumented, had to reverse-engineer"
-5. **Accomplishments** — What's genuinely impressive. "6 sponsor tools in one autonomous loop"
-6. **What we learned** — ONE sharp insight. "Compliance for agents is a schema problem, not a model problem."
-7. **What's next** — The v2 business vision, not just "add more features."
-8. **Built with** — Tag EVERY sponsor tool.
+Write devpost at [FREEZE] time. See `reference/devpost.md` for the full template.
 
 ## Submission checklist
 
 - [ ] Public GitHub repo pushed, README lists sponsor tools used
 - [ ] [DEMO_LENGTH] demo recording uploaded
-- [ ] All Devpost fields filled (use the writing guide above)
+- [ ] All Devpost fields filled (see `reference/devpost.md`)
 - [ ] Sponsor tracks explicitly called out in submission
 - [ ] Submitted by [SUBMIT_TARGET]
 ```
